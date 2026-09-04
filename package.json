@@ -1,0 +1,29 @@
+{
+  "name": "desk-cost-control",
+  "version": "0.1.0",
+  "description": "Cost control, deduplication, triage, and cadence control for Jamal Al Mutawa's Middle East Grok Bot watch desk",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx --test test/**/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "grok-bot",
+    "cost-control",
+    "watch-desk",
+    "triage",
+    "deduplication",
+    "middle-east"
+  ],
+  "author": "Jamal Al Mutawa / Middle East Grok Bot Watch Desk",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

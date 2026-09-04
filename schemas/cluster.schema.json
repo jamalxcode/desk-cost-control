@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/jamalxcode/desk-cost-control/main/schemas/cluster.schema.json",
+  "title": "Cluster",
+  "description": "Cross-desk incident cluster grouped by geo + type + 6h window",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique cluster identifier (e.g. clus_geo_type_timestamp)"
+    },
+    "geo": {
+      "type": "string",
+      "description": "Normalized geographic location"
+    },
+    "type": {
+      "type": "string",
+      "description": "Incident type classification"
+    },
+    "window_start": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Start timestamp of the 6-hour cluster window"
+    },
+    "window_end": {
+      "type": "string",
+      "format": "date-time",
+      "description": "End timestamp of the 6-hour cluster window"
+    },
+    "claim_fingerprint": {
+      "type": "string",
+      "description": "Representative claim fingerprint for the cluster"
+    },
+    "incident_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "IDs of incidents grouped into this cluster"
+    },
+    "post_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "All deduplicated X post IDs attached to this cluster"
+    },
+    "desks": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Distinct desks contributing to this cluster"
+    },
+    "first_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Earliest report timestamp in cluster"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Latest report timestamp in cluster"
+    },
+    "incident_count": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Total number of reports / incidents in this cluster"
+    }
+  },
+  "required": [
+    "id",
+    "geo",
+    "type",
+    "window_start",
+    "window_end",
+    "claim_fingerprint",
+    "incident_ids",
+    "post_ids",
+    "desks",
+    "first_seen",
+    "last_seen",
+    "incident_count"
+  ],
+  "additionalProperties": false
+}

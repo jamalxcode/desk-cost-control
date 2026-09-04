@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/jamalxcode/desk-cost-control/main/schemas/seen-post.schema.json",
+  "title": "SeenPost",
+  "description": "Deduplication index entry for raw X posts seen by any watch desk",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Deduplication hash (SHA-256 of post_id or normalized content)"
+    },
+    "post_id": {
+      "type": "string",
+      "description": "Original X post snowflake ID or URL"
+    },
+    "desk": {
+      "type": "string",
+      "description": "Watch desk that first ingested this post"
+    },
+    "seen_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when post was ingested"
+    },
+    "claim_hash": {
+      "type": "string",
+      "description": "Normalized claim text hash"
+    },
+    "raw_text_snippet": {
+      "type": "string",
+      "maxLength": 280,
+      "description": "Optional snippet of raw text for audit review"
+    }
+  },
+  "required": [
+    "id",
+    "post_id",
+    "desk",
+    "seen_at",
+    "claim_hash"
+  ],
+  "additionalProperties": false
+}
