@@ -1,0 +1,89 @@
+# Middle East Grok Bot Watch Desk - Cron Stagger & Cadence Configuration (Example)
+# Timezone: Asia/Kuwait (UTC+03:00)
+
+timezone: "Asia/Kuwait"
+
+# Problem Solved:
+# Replaces the 08:00 AM synchronized stampede (where ~16 desks fired simultaneously, causing
+# rate limits and duplicate X billing) with a predictable, staggered polling wave.
+
+schedule:
+  # Wave 1 (Minute :00): Tier 1 Strategic Hotspots
+  - desk: "kuwait"
+    cron: "0 8 * * 0-4" # Sun-Thu 08:00 Asia/Kuwait
+    cadence: "stagger_wave_1"
+    offset_minutes: 0
+    type: "full_flash"
+    description: "Kuwait defense, civil sirens, OKAC FIR airspace"
+
+  - desk: "iran"
+    cron: "0 8 * * 0-4" # Sun-Thu 08:00 Asia/Kuwait
+    cadence: "stagger_wave_1"
+    offset_minutes: 0
+    type: "full_flash"
+    description: "Iranian airspace (OIIX), missile launch sites, IRGC alerts"
+
+  - desk: "hormuz"
+    cron: "0 8 * * 0-4" # Sun-Thu 08:00 Asia/Kuwait
+    cadence: "stagger_wave_1"
+    offset_minutes: 0
+    type: "full_flash"
+    description: "Strait of Hormuz TSS, tanker traffic, maritime security"
+
+  # Wave 2 (Minute :05): GCC Regional & Qatar Standing Brief Stub (Gap Fix)
+  - desk: "gcc"
+    cron: "5 8 * * 0-4" # Sun-Thu 08:05 Asia/Kuwait
+    cadence: "stagger_wave_2"
+    offset_minutes: 5
+    type: "regional_stub"
+    description: "GCC collective defense, Saudi/UAE/Bahrain/Oman"
+
+  - desk: "qatar"
+    cron: "5 8 * * 0-4" # Sun-Thu 08:05 Asia/Kuwait
+    cadence: "stagger_wave_2"
+    offset_minutes: 5
+    type: "cheap_stub"
+    description: "Qatar standing brief stub (Al Udeid, OTDF FIR, Ras Laffan) - low token cost"
+
+  # Wave 3 (Minute :15): Levant Regional Arc
+  - desk: "levant"
+    cron: "15 8 * * 0-4" # Sun-Thu 08:15 Asia/Kuwait
+    cadence: "stagger_wave_3"
+    offset_minutes: 15
+    type: "regional_stub"
+    description: "Syria, Lebanon, Jordan border corridor, East Med"
+
+  # Wave 4 (Minute :20): Red Sea & Bab el-Mandeb Maritime Corridor
+  - desk: "red_sea"
+    cron: "20 8 * * 0-4" # Sun-Thu 08:20 Asia/Kuwait
+    cadence: "stagger_wave_4"
+    offset_minutes: 20
+    type: "maritime_corridor"
+    description: "Southern Red Sea, Bab el-Mandeb, Gulf of Aden"
+
+# Reporter Pack Daily Rollups (08:30, 12:30, 20:30 Asia/Kuwait daily):
+# Fired after the morning staggered wave completes to synthesize multi-desk digests.
+reporter_packs:
+  schedule:
+    - time: "08:30"
+      cron: "30 8 * * *" # Daily 08:30 Asia/Kuwait
+      description: "Morning Regional Synthesis Pack (consumes Waves 1-4 delta outputs)"
+    - time: "12:30"
+      cron: "30 12 * * *" # Daily 12:30 Asia/Kuwait
+      description: "Mid-day Flash Update Pack"
+    - time: "20:30"
+      cron: "30 20 * * *" # Daily 20:30 Asia/Kuwait
+      description: "Evening Review & Overnight Handover Pack"
+
+# Accounts Spend Watch Routine (2-3x / day vs wasteful hourly checks):
+accounts_spend_watch:
+  schedule:
+    - time: "07:45"
+      cron: "45 7 * * *" # Daily 07:45 Asia/Kuwait (Pre-morning wave budget check)
+      description: "Pre-morning wave budget audit"
+    - time: "15:45"
+      cron: "45 15 * * *" # Daily 15:45 Asia/Kuwait (Mid-shift spend audit)
+      description: "Mid-day spend reconciliation"
+    - time: "23:45"
+      cron: "45 23 * * *" # Daily 23:45 Asia/Kuwait (End-of-day spend audit and ledger reset)
+      description: "Nightly ledger reconciliation and compact check"

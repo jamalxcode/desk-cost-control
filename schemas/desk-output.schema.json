@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/jamalxcode/desk-cost-control/main/schemas/desk-output.schema.json",
+  "title": "DeskOutput",
+  "description": "Strict JSON output schema emitted by watch desks (no house style headers or emojis)",
+  "type": "object",
+  "properties": {
+    "desk": {
+      "type": "string",
+      "description": "Desk identifier (e.g. kuwait, iran, hormuz, qatar, gcc, levant, red_sea)"
+    },
+    "run_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of desk run execution"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["QUIET", "ACTIVE", "ALERT"],
+      "description": "Overall status of the desk run"
+    },
+    "silence_declared": {
+      "type": "boolean",
+      "description": "True when desk observed no material developments (enforces quiet policy)"
+    },
+    "items": {
+      "type": "array",
+      "maxItems": 10,
+      "description": "List of factual items extracted during this run (max 10 items to enforce token budget)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "description": "Unique identifier for this item / incident reference"
+          },
+          "geo": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "Geographic location"
+          },
+          "type": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "Event classification (e.g. missile_strike, airspace_closure)"
+          },
+          "severity_tier": {
+            "type": "string",
+            "enum": ["DROP", "BATCH", "ALERT"],
+            "description": "Triage severity tier"
+          },
+          "severity_level": {
+            "type": "string",
+            "enum": ["🟢", "🟡", "🟠", "🔴"],
+            "description": "Visual indicator emoji"
+          },
+          "headline": {
+            "type": "string",
+            "maxLength": 140,
+            "description": "Short factual headline (max 140 chars)"
+          },
+          "facts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 280
+            },
+            "description": "List of concise factual bullet points (max 280 chars each)"
+          },
+          "sources": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Attributed sources or handles"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["CONFIRMED", "HIGH", "MEDIUM", "UNVERIFIED"],
+            "description": "Corroboration confidence label"
+          },
+          "post_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Associated post IDs"
+          }
+        },
+        "required": [
+          "item_id",
+          "geo",
+          "type",
+          "severity_tier",
+          "severity_level",
+          "headline",
+          "facts",
+          "sources",
+          "confidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "delta_summary": {
+      "type": "string",
+      "maxLength": 280,
+      "description": "One-sentence summary of delta since previous run (max 280 chars)"
+    }
+  },
+  "required": [
+    "desk",
+    "run_timestamp",
+    "status",
+    "silence_declared",
+    "items"
+  ],
+  "additionalProperties": false
+}

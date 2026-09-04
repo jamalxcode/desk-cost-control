@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/jamalxcode/desk-cost-control/main/schemas/desk-state.schema.json",
+  "title": "DeskState",
+  "description": "Rolling state schema for individual watch desks to prevent full-history replay",
+  "type": "object",
+  "properties": {
+    "desk": {
+      "type": "string",
+      "description": "Watch desk identifier (e.g. kuwait, iran, hormuz, qatar, gcc, levant, red_sea)"
+    },
+    "last_run_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last executed run"
+    },
+    "open_incidents": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of active incident IDs currently tracked by this desk"
+    },
+    "silence_streak": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of consecutive quiet runs with zero new material developments"
+    },
+    "last_alert_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of the most recent ALERT-level event, or null if none"
+    },
+    "since_cursor": {
+      "type": ["string", "null"],
+      "description": "Pagination/snowflake cursor for incremental X polling"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when state file was saved"
+    }
+  },
+  "required": [
+    "desk",
+    "last_run_at",
+    "open_incidents",
+    "silence_streak",
+    "last_alert_at",
+    "since_cursor"
+  ],
+  "additionalProperties": false
+}

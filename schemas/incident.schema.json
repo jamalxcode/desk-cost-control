@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/jamalxcode/desk-cost-control/main/schemas/incident.schema.json",
+  "title": "Incident",
+  "description": "Shared incident schema for Middle East Grok Bot watch desk",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the incident (e.g. inc_7f8a9b or UUID)"
+    },
+    "geo": {
+      "type": "string",
+      "description": "Geographic location or code (e.g. KW, IR, Hormuz, Red Sea, Levant, GCC, QA)"
+    },
+    "type": {
+      "type": "string",
+      "description": "Incident classification (e.g. missile_strike, drone_intercept, tanker_seizure, gps_jamming, airspace_closure, sirens)"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["drop", "batch", "alert", "🟢", "🟡", "🟠", "🔴"],
+      "description": "Incident severity tier or emoji indicator"
+    },
+    "severity_tier": {
+      "type": "string",
+      "enum": ["DROP", "BATCH", "ALERT"],
+      "description": "Canonical severity tier"
+    },
+    "severity_level": {
+      "type": "string",
+      "enum": ["🟢", "🟡", "🟠", "🔴"],
+      "description": "Canonical severity indicator emoji"
+    },
+    "first_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when incident was first observed"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of most recent report on this incident"
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of source handles, URLs, or news agency IDs"
+    },
+    "desks": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of watch desks reporting or tracking this incident (e.g. kuwait, iran, hormuz)"
+    },
+    "claim_fingerprint": {
+      "type": "string",
+      "description": "Normalized claim fingerprint / SimHash for deduplication"
+    },
+    "post_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Associated X post IDs or post hashes"
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 280,
+      "description": "Concise factual summary (no house style headers or emoji decorations)"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["CONFIRMED", "HIGH", "MEDIUM", "UNVERIFIED"],
+      "description": "Confidence label based on source corroboration"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["OPEN", "MONITORING", "RESOLVED"],
+      "default": "OPEN",
+      "description": "Incident lifecycle status"
+    }
+  },
+  "required": [
+    "id",
+    "geo",
+    "type",
+    "severity",
+    "first_seen",
+    "last_seen",
+    "sources",
+    "desks",
+    "claim_fingerprint",
+    "post_ids"
+  ],
+  "additionalProperties": false
+}
