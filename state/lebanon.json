@@ -1,0 +1,16 @@
+{
+  "desk": "lebanon",
+  "last_run_at": "2026-09-07T05:25:00Z",
+  "open_incidents": [
+    "lebanon-kafr-rumman-overnight-2026-09-07",
+    "lebanon-nabatieh-cluster-overnight-2026-09-06-07",
+    "israel-lebanon-hospital-hq-strikes-2026-09-06",
+    "lebanon-hezbollah-drones-idf-response-2026-09-06",
+    "lebanon-ali-taher-ridge-ops-2026-09-05"
+  ],
+  "silence_streak": 0,
+  "last_alert_at": "2026-09-07T05:25:00Z",
+  "since_cursor": "2096830721901912343",
+  "updated_at": "2026-09-07T05:25:00Z",
+  "notes": "Optimized Lebanon X briefing 7 Sep. X OK (~$0.20); one official multi-handle 429 then recovered via named handles. New Kafr Rumman overnight 9 killed; Nabatieh cluster overnight; hospital HQ already on Israel ledger (cross-ref only)."
+}

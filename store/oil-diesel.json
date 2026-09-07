@@ -1,0 +1,34 @@
+{
+  "as_of_date": "2026-09-07",
+  "as_of_note": "Mon 7 Sep 2026 08:31 Kuwait oil/diesel watch; US Labor Day \u2014 AAA still stamped 9/6; Globex/Asia quotes show modest crude extension.",
+  "timezone_context": "Asia/Kuwait",
+  "aaa_diesel_usd_per_gal": 5.897,
+  "aaa_diesel_yesterday": 5.8819,
+  "aaa_diesel_week_ago": 5.6035,
+  "aaa_diesel_day_change_usd": 0.0151,
+  "aaa_diesel_week_change_usd": 0.2935,
+  "aaa_diesel_note": "AAA national average still as of 9/6/26: $5.8970 (AAA highest recorded average; prior day $5.8819). Day +1.5\u00a2 vs page yesterday; week +29.3\u00a2. No fresh 9/7 AAA print at this fire (US Labor Day). Regular gas national avg $4.1473.",
+  "brent_usd_per_bbl": 96.8,
+  "brent_note": "ICE Brent ~$96.80 early Mon (+$0.52 / +0.54% vs Fri settle $96.28). Under 3% day threshold.",
+  "wti_usd_per_bbl": 92.14,
+  "wti_note": "NYMEX WTI ~$92.14 early Mon (+$0.66 / +0.72% vs Fri settle $91.48). Under 3% day threshold. US RTH holiday Labor Day.",
+  "ho_ulsd_usd_per_gal": 4.547,
+  "ho_ulsd_note": "NYMEX HO/ULSD last confirmed ~$4.547/gal (Fri 4 Sep settle). No fresh Labor Day RTH settle; Oct continuous prints near ~$4.54 in delayed feeds.",
+  "kuwait_diesel_note": "KNPC retail diesel/kerosene held at 115 fils/L through 30 Sep 2026 (Q3 schedule); unchanged vs mass-market gasoline.",
+  "week_crude_note": "Wires: Brent week ended ~7.8%; WTI week ~+10% into Fri. Mon morning extensions ~0.5\u20130.7% \u2014 not a new \u22653% day spike.",
+  "significant": false,
+  "significant_reasons": [],
+  "quiet_reason": "No new AAA diesel print/record vs prior fire; diesel day <+5\u00a2 on last print; Brent/WTI day <<3%; week diesel \u226510\u00a2 already notified 6 Sep \u2014 no re-ping. Modest Hormuz-premium extension only.",
+  "sources": [
+    "AAA gasprices.aaa.com still as of 9/6/26",
+    "Business Times / Reuters Mon 7 Sep Brent ~$96.80 WTI ~$92.14",
+    "Prior notebook HO/ULSD Fri $4.547; IndexQ/FXEmpire ~$4.54",
+    "KNPC / Arab Times Q3 Kuwait fuel schedule"
+  ],
+  "last_updated": "2026-09-07T08:36:07+03:00",
+  "futures_flow": {
+    "watch": "oil-futures-unusual-flow-watch",
+    "last_note": "[2026-09-06T08:12+03:00] Baseline: viral ~$275M Fri long before Sat tanker strikes = UNVERIFIED social; monitoring unusual Brent/WTI/ULSD flow going forward.",
+    "updated": "2026-09-06T08:12+03:00"
+  }
+}

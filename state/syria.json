@@ -1,0 +1,14 @@
+{
+  "desk": "syria",
+  "last_run_at": "2026-09-07T05:13:06Z",
+  "open_incidents": [
+    "syria-al-rafid-artillery-2026-09-06",
+    "syria-ruwaihinah-beit-jinn-artillery-2026-09-05",
+    "syria-samdaniya-mashaala-artillery-2026-09-06",
+    "syria-suwayda-barrack-restraint-2026-09-06"
+  ],
+  "silence_streak": 0,
+  "last_alert_at": "2026-09-07T05:13:06Z",
+  "since_cursor": "2096828203776287032",
+  "updated_at": "2026-09-07T05:13:06Z"
+}

@@ -1,0 +1,19 @@
+{
+  "desk": "israel",
+  "last_run_at": "2026-09-07T05:16:41Z",
+  "open_incidents": [
+    "israel-gaza-yellow-line-ied-response-2026-09-07",
+    "israel-lebanon-hospital-hq-strikes-2026-09-06",
+    "israel-nabatieh-followon-strikes-2026-09-06-07",
+    "israel-hezbollah-drones-idf-response-2026-09-06",
+    "israel-ali-taher-ridge-control-2026-09-05",
+    "israel-cos-snap-drill-2026-09-06",
+    "israel-westbank-aqaba-hamas-cell-2026-09-06",
+    "israel-quneitra-al-rafid-artillery-2026-09-06"
+  ],
+  "silence_streak": 0,
+  "last_alert_at": "2026-09-07T05:16:41Z",
+  "since_cursor": "2096828569418645556",
+  "updated_at": "2026-09-07T05:19:33Z",
+  "notes": "Optimized Israel X briefing 7 Sep. X OK (~$0.20). New Yellow Line IED+Gaza response; Lebanon hospital HQ + Nabatieh follow-ons; WB Aqaba cell; drill update. No Israel-proper sirens in pull."
+}

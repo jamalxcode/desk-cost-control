@@ -1,0 +1,34 @@
+{
+  "captured_at_utc": "2026-09-04T10:20:19.698580+00:00",
+  "captured_at_kuwait_note": "Fri 4 Sep ~13:20 KWT \u2014 Phase 1 live; next morning wave Sun 6 Sep 08:00",
+  "x_credits_latest": {
+    "ts_utc": "2026-09-04T09:57:43Z",
+    "total_balance": 244.54,
+    "free_balance": 219.54,
+    "prepaid_balance": 25.0,
+    "source": "get_usage_credits",
+    "x_last_hour": 0.0,
+    "x_last_24h": 0.0
+  },
+  "cursor_spend_latest": {
+    "ts_utc": "2026-09-04T09:57:43Z",
+    "source": "cursor.com/dashboard/spending",
+    "plan": "Pro+",
+    "on_demand_used": 0.0,
+    "on_demand_limit": 100.0,
+    "on_demand_remaining": 100.0,
+    "grok_bot_weekly_pct": 73,
+    "grok_bot_reset": "2026-09-06",
+    "cursor_models_pct": 0,
+    "other_models_pct": 2,
+    "plan_reset": "2026-09-30",
+    "last_hour": 0.0,
+    "last_24h": 0.0,
+    "note": "Logged in as Jamal Al Mutawa, Pro+. On-demand $0.00/$100. Grok Bot weekly 73% (was 72 at 2026-09-04T09:00:20Z). Usage limits reset Sep 30 (27 days left); Grok Bot resets Sep 6 (2 days left). Read via computerUse after browserUse driver failure."
+  },
+  "phase1_notes": {
+    "cost_mode": "optimized",
+    "stagger": "KW/IR/Hormuz :00; GCC+Qatar :05; Levant :15; Red Sea :20; reporter :30; Accounts 7/15/19:45 Sun-Thu",
+    "shared": "/home/box/agent-data/shared/desk-cost-control"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "desk": "qatar",
+  "last_run_at": "2026-09-07T05:08:08Z",
+  "last_run_kwt": "2026-09-07T08:08:08+03:00",
+  "status": "QUIET",
+  "silence_declared": true,
+  "silence_streak": 2,
+  "open_incidents": [],
+  "notes": "Phase1 run 2. No overnight kinetic at Al Udeid / Ras Laffan / OTDF / DOH. X OK. DROP: JacksonHinkle/HormuzLetter Al Udeid aircraft-withdrawal recirculation (orig 5–6 Sep; July-era packaging; wires no new Sep 7 evacuate); ClashReport Netanyahu/Bennett Qatar rhetoric (pre-window); low-cred zero-engagement 'Ras Laffan fire' satellite claims 6 Sep (~16:10–16:47Z) uncorroborated — Stapczynski same morning covers Ras Laffan low-output/Hormuz-idled LNG without fire; QR Doha–Jakarta cancels = Indonesia volcanic ash not Qatar airspace; QNA weather/sports/Gaza joint statement. Standing: Ras Laffan low production + Hormuz-idled Qatari LNG carriers (Stapczynski 7 Sep ~07:44 KWT).",
+  "checked": {
+    "x_status": "ok",
+    "x_credits_usd": 234.69,
+    "sources": [
+      "X get_posts_counts_recent",
+      "X search_news",
+      "X search_posts_all",
+      "X from:QNAEnglish/qatarairways",
+      "WebSearch wires",
+      "Peninsula Qatar",
+      "Gulf Times"
+    ],
+    "gap": null
+  },
+  "updated_at": "2026-09-07T05:08:08Z"
+}

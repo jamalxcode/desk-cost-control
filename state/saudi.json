@@ -1,0 +1,25 @@
+{
+  "desk": "saudi",
+  "last_run_at": "2026-09-06T05:07:23Z",
+  "last_run_kwt": "2026-09-06T08:07:23+03:00",
+  "status": "ACTIVE",
+  "silence_declared": false,
+  "silence_streak": 0,
+  "open_incidents": [
+    {
+      "id": "saudi-us-fms-jdam-agt1500-2026-09-04",
+      "type": "arms_sale_notification",
+      "severity_tier": "BATCH",
+      "status": "MONITORING"
+    }
+  ],
+  "checked": {
+    "x_credits_usd": 239.17,
+    "sources": ["get_posts_counts_recent x3", "search_news", "search_posts_all AR local", "from:SPAregions", "WebSearch/WebFetch state.gov"],
+    "x_gap": "EN kinetic + DSCA search 429/rate-limit after first pulls; wires+SPA used",
+    "kinetic_saudi_territory": "none_new",
+    "southern_border_count_36h": 38,
+    "aramco_incident_count_36h": 8
+  },
+  "notes": "No Saudi-territory intercept/strike/AD overnight. SPA weather/diplomacy only. Hormuz CENTCOM three-tanker recirculation owned by iran/hormuz desks — not re-flashed. First Saudi-desk capture of Sep 4 US FMS JDAM-ER + AGT-1500."
+}
