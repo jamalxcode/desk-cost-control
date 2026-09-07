@@ -81,6 +81,18 @@ desk-cost-control/
 - **DROP (Filtered & Logged)**: Pure rhetoric cheerleading, crypto spam, historical essays, lifestyle chatter.
 - **Ambiguity Escalation**: Any ambiguous text containing security signals automatically escalates to `BATCH` or `ALERT`—**never** silently dropped. All drops are logged to `drop-audit.jsonl` for audit sampling.
 
+### Pre-LLM Ingest Gate CLI
+- **CLI Gate (`bin/ingest_gate.ts`)**: Fast Phase-0 gate executed prior to expensive LLM or deep X pulls.
+  ```bash
+  # Run gate CLI
+  npm run gate -- --post-ids "189384729103847582" --claim "Air defense active over Bubiyan" --text "Sirens sounding in Kuwait"
+  ```
+  - Reads `--post-ids`, `--claim`, `--text`, optional `--fingerprint`, optional `--store`.
+  - Evaluates duplicate post IDs and claim Jaccard token similarity ($\ge 0.72$).
+  - Evaluates alert keywords (`missile|asbm|strike|siren|intercept|sunk|seizure|kinetic|explosion|ballistic|ukmto|centcom|kuwait ad`).
+  - Automatically appends DROP / BATCH-known records to `drop-audit.jsonl`.
+  - Emits single JSON result: `{"decision":"DROP"|"BATCH"|"ALERT","reason":"...","matched_ids":[...],"sim":0.0}`.
+
 ### Compact Rolling State & Delta Digests
 - Replaces expensive full chat history replay with `DeltaDigest.prompt_input`.
 - Injects only:
@@ -107,6 +119,9 @@ npm install
 
 # Run unit tests
 npm test
+
+# Run Pre-LLM Ingest Gate example
+npm run gate -- --post-ids "189384729103847582" --text "Sirens sounding in Kuwait"
 
 # Run TypeScript typecheck
 npm run typecheck
