@@ -1,0 +1,24 @@
+{
+  "desk": "oman",
+  "last_run_at": "2026-09-07T05:04:58Z",
+  "last_run": "2026-09-07T05:04:58Z",
+  "last_run_kwt": "2026-09-07T08:04:58+03:00",
+  "status": "QUIET",
+  "silence_declared": true,
+  "silence_streak": 1,
+  "flash_bar_hit": false,
+  "open_incidents": [
+    "oman-rejects-hormuz-fee-2026-09-03"
+  ],
+  "notes": "Delta since 2026-09-06T05:07:55Z: no Oman-territory kinetic/AD/airspace/mobilization. EN+AR X = Hormuz/GoO ASBM+tanker recirculation (Hormuz/Iran-owned DROP) + civil noise. Wires: Oman-Yemen Dhofar–Al Mahrah power interconnection (Salalah 6 Sep) + Hafeet Rail recirculation + MCT/SLL airport awards — DROP civil. Fee rejection / EASA CZIB Muscat FIR GoO W of 58E standing — no delta. Official-handle peek skipped (prior 429).",
+  "checked": {
+    "x_credits_usd": 235.16,
+    "sources": [
+      "get_posts_counts_recent EN+AR",
+      "search_posts_all security/local EN+AR",
+      "search_news",
+      "WebSearch wires"
+    ],
+    "x_gap": null
+  }
+}

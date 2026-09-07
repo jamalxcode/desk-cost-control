@@ -1,0 +1,18 @@
+{
+  "desk": "somalia",
+  "last_run_at": "2026-09-06T05:05:08Z",
+  "last_run_kwt": "2026-09-06T08:05:08+03:00",
+  "status": "ALERT",
+  "silence_declared": false,
+  "silence_streak": 0,
+  "open_incidents": [
+    "somalia-doolow-shub-strike-2026-09-03",
+    "somalia-baidoa-laftagareen-clash-2026-09-03",
+    "somalia-turkey-trained-troops-baidoa-2026-09-05"
+  ],
+  "notes": "ALERT: Doolow disputed strike + Baidoa clashes + Turkey-trained SNA deploy. X 429 once on AS query; news+targeted search+wires OK. Credits ~$240.57.",
+  "checked": {
+    "x_credits_usd": 240.57,
+    "sources": ["search_news", "search_posts_all", "WebSearch", "Somalia Today", "Hiiraan", "Somali Guardian", "Garowe Online"]
+  }
+}

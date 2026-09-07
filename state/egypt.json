@@ -1,0 +1,22 @@
+{
+  "desk": "egypt",
+  "last_run_at": "2026-09-07T05:09:10Z",
+  "last_run_kwt": "2026-09-07T08:09:10+03:00",
+  "status": "QUIET",
+  "silence_declared": true,
+  "silence_streak": 2,
+  "open_incidents": [],
+  "notes": "QUIET delta since 6 Sep 08:07 KWT. No new canal blockage/SCA halt, GoSuez/named-hull kinetic, AD intercept/city explosion, Rafah ops change, Damietta/LNG new fire, or CAI/EgyptAir NOTAM cluster. X: Suez-incident counts 8 overnight (all DROP history/meme/rhetoric); Damietta posts = Jul strike recirculation/rhetoric only; Rafah = aid-control debate not ops change; official handles (EgyptAir) = CS + El Alamein airshow only (429 once on Cairo AD query). News/wires: SCA Rabie diplomacy 2–3 Sep standing; Damietta FSRU Q4 resume = Sep 1 standing; Jul Damietta recirculation. Credits ~$234.02 after run (~$0.40 X spend).",
+  "checked": {
+    "x_credits_usd": 234.02,
+    "sources": [
+      "get_posts_counts_recent",
+      "search_posts_all",
+      "search_news",
+      "WebSearch",
+      "SCA.gov.eg/wires"
+    ],
+    "x_gap": "one 429 on Cairo AD/explosion search; Rafah/official/Suez/Damietta recovered"
+  },
+  "updated_at": "2026-09-07T05:09:10Z"
+}

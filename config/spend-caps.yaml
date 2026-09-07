@@ -1,0 +1,53 @@
+# Middle East Grok Bot Watch Desk - Spend Caps Configuration (Example / Placeholder)
+# NOTE: Placeholders only. No live secrets or API keys are stored in this repository.
+
+# Cost Mode Switch:
+# - 'optimized': Enforces deduplication, triage routing, delta digests, and batching.
+# - 'legacy': Rollback mode running unthrottled prompts and legacy polling.
+cost_mode: "optimized"
+
+# Spend Thresholds & Budget Limits:
+thresholds:
+  # Daily Grok Bot token spend as a percentage of weekly allocated budget
+  # Soft breach (70%): Log warning alert to Accounts channel, restrict non-priority queries
+  daily_grok_weekly_pct_soft: 70
+  # Hard breach (90%): Pause non-alert routines, throttle background polling
+  daily_grok_weekly_pct_hard: 90
+
+  # Daily direct X API spend cap in USD
+  # Soft breach ($15.00): Restrict to primary news handles, disable exploratory wide searches
+  daily_x_usd_soft: 15.00
+  # Hard breach ($25.00): Hard stop on non-ALERT X API calls
+  daily_x_usd_hard: 25.00
+
+  # Enforcement Policy:
+  # When hard cap is breached, automatically pause all non-ALERT desk runs and routine packs.
+  # ALERT bypasses remain active to ensure critical early warning is never suppressed.
+  pause_non_alert_on_hard: true
+
+# Token Budget Limits per LLM Invocation:
+token_budgets:
+  max_output_items: 5
+  max_chars_per_headline: 140
+  max_chars_per_fact: 280
+  max_input_delta_tokens: 1200
+
+# Accounts Agent Enforcement Architecture (Docs Only - No Live System Hooks):
+#
+# 1. Enforcement Cadence:
+#    The Accounts agent executes spend checks 2-3 times daily (07:45, 15:45, 23:45 Asia/Kuwait),
+#    replacing previous wasteful hourly polling.
+#
+# 2. Spend Audit Workflow:
+#    a. Read daily API billing counters (X API + xAI / Grok token usage).
+#    b. Calculate spend vs prorated daily/weekly baseline.
+#    c. If daily_x_usd > daily_x_usd_soft:
+#       - Tag desk state with status: 'BUDGET_WARNING'
+#       - Post concise advisory to #desk-ops-billing.
+#    d. If daily_x_usd >= daily_x_usd_hard or daily_grok >= daily_grok_weekly_pct_hard:
+#       - Set desk global lock: 'PAUSE_NON_ALERT'
+#       - Only ALERT keyword matches (missiles, strikes, sirens, etc.) proceed.
+#       - Scheduled routine packs are silenced until next 00:00 Asia/Kuwait reset.
+#
+# 3. Emergency Overrides:
+#    - Manual override by Desk Lead (Jamal Al Mutawa) can lift pause via config flag.

@@ -1,0 +1,28 @@
+{
+  "desk": "sudan",
+  "last_run_at": "2026-09-06T05:11:09Z",
+  "last_run_kwt": "2026-09-06T08:11:09+03:00",
+  "status": "ALERT",
+  "silence_declared": false,
+  "silence_streak": 0,
+  "open_incidents": [
+    "sudan-dilling-splm-n-shelling-2026-09-05",
+    "sudan-kauda-otoro-attacks-2026-09-04",
+    "sudan-al-baraka-rsf-attack-2026-09-04",
+    "sudan-abbasiya-displacement-2026-09-01",
+    "sudan-el-fasher-rsf-fortify-2026-09-03"
+  ],
+  "notes": "ALERT: Dilling+Kauda SPLM-N civilian attacks; Al-Baraka RSF+SPLM-N attack claim; Abbasiya displacement; El Fasher fortify. X MCP failed_to_load (tools=0) — wires/WebSearch only. Gap labeled. No South Sudan new kinetic overnight.",
+  "checked": {
+    "x_status": "failed_to_load",
+    "sources": [
+      "WebSearch",
+      "WebFetch",
+      "Al Jazeera",
+      "Anadolu Agency",
+      "The Sudan Times",
+      "IOM via AA",
+      "Radio Tamazuj"
+    ]
+  }
+}

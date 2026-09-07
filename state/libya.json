@@ -1,0 +1,31 @@
+{
+  "desk": "libya",
+  "last_run_at": "2026-09-07T05:13:10Z",
+  "last_run_kwt": "2026-09-07T08:13:10+03:00",
+  "status": "ALERT",
+  "silence_declared": false,
+  "silence_streak": 0,
+  "open_incidents": [
+    "libya-gnu-drone-cell-arrest-2026-09-06"
+  ],
+  "notes": "ALERT: GNU Defense Ministry announced Sep 6 arrest of 5-person (Libyan+foreign) sabotage cell for suicide-drone hits on oil tanks Tripoli/Zawiya + Zawiya power; foiled further plots (south Tripoli power, VIPs). BATCH: US State Level 4 travel warning renewed. No new Mitiga/Benina NOTAM cluster, Sharara/El Feel halt, or Tripoli militia street clash overnight. Prior Aug Zawiya + Sep 3 Brega Airport Road depot strikes are the kinetic backdrop (pre/at prior run edge). X: counts+2x search_posts_all+search_news; later X calls 429 rate-limit — wires filled gap. Credits ~$233.95 at start.",
+  "checked": {
+    "x_credits_usd": 233.95,
+    "sources": [
+      "get_posts_counts_recent",
+      "search_posts_all",
+      "search_news",
+      "WebSearch",
+      "Anadolu Agency",
+      "Xinhua",
+      "Libya Observer",
+      "Libya Review",
+      "Libya Herald",
+      "alwasatengnews",
+      "EremNews",
+      "NewsCentralTV"
+    ],
+    "x_gap": "rate-limit on follow-up targeted drone search and second search_news; primary sample + wires recovered"
+  },
+  "updated_at": "2026-09-07T05:13:10Z"
+}

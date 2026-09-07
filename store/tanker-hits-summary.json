@@ -1,0 +1,41 @@
+{
+  "window": "2026-05 through early 2026-09",
+  "window_note": "Confirmed named commercial hull hits; May fold-in + Jun–Jul + Aug–early Sep",
+  "grand_total_confirmed": 29,
+  "contested_extra": {
+    "count": 1,
+    "vessel": "NCC Ghazal",
+    "note": "Contested; not in the 29 — would make 30 if counted"
+  },
+  "excluded_categories": [
+    "US tanker-for-tanker strikes on Iranian NITC tonnage",
+    "Harassment with no hull strike",
+    "Unconfirmed claim-only incidents"
+  ],
+  "kuwait_flag": {
+    "count": 3,
+    "vessels": ["Kaifan", "Al Salam II", "Burgan"]
+  },
+  "attacker_split": {
+    "Iran_IRGC_or_pattern": 26,
+    "Houthi": 3,
+    "everyone_else": 0,
+    "houthi_named": ["Encelia", "NCC Masa", "Amzan"]
+  },
+  "victim_note": "Iranian or Iran-allied commercial hulls in the 29: 0; everyone else: 29",
+  "last_hit": {
+    "date_utc": "2026-08-31",
+    "vessels": ["Sidr", "Senegal Prosperity"],
+    "location": "Strait of Hormuz outbound near Khasab",
+    "note": "Twin window 31 Aug; Sidr (Saudi/Bahri) + Senegal Prosperity (Liberia/Sinokor)"
+  },
+  "seed_incidents": [
+    "tanker-barakah-2026-05-04",
+    "tanker-kaifan-2026-07-20",
+    "tanker-amzan-2026-08-24",
+    "tanker-al-salam-ii-2026-08-25",
+    "tanker-burgan-2026-08-29",
+    "tanker-sidr-2026-08-31"
+  ],
+  "last_updated": "2026-09-05T13:45:00+03:00"
+}

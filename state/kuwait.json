@@ -1,0 +1,22 @@
+{
+  "desk": "kuwait",
+  "last_run": "2026-09-07T05:01:56+00:00",
+  "last_run_kwt": "2026-09-07T08:01:56+03:00",
+  "status": "QUIET",
+  "silence_declared": true,
+  "flash_bar_hit": false,
+  "notes": "GHQ only staff-college post (6 Sep); no overnight AD/siren/intercept confirm. KUNA sports/diplomacy DROP. EN+AR X = rhetoric/sports/pardon chatter; no AD cluster spike. Satellite Ali Al Salem/Ahmad Al-Jaber damage claims (EGYOSINT/MizarVision etc) = recirculation of already-known UNVERIFIED Sep 2–3 IRGC claims — not re-flashed. No new UKMTO Kuwait product; tanker wires Hormuz/Oman not Kuwait FIR. Fri 4 Sep EARLY OSINT AD cluster unchanged not re-flashed.",
+  "checked": {
+    "x_credits_usd": 235.66,
+    "sources": [
+      "KuwaitArmyGHQ",
+      "kuna_en",
+      "kuna_ar",
+      "search_posts_all EN+AR+bases",
+      "search_news",
+      "WebSearch wires"
+    ],
+    "ghq_ad_posts_since_sep4": 0,
+    "ghq_non_ad_posts_since_sep4": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "desk": "bahrain",
+  "last_run": "2026-09-06T05:07:48+00:00",
+  "last_run_kwt": "2026-09-06T08:07:48+03:00",
+  "status": "QUIET",
+  "flash": false,
+  "x_status": "failed_to_load+rate_limit",
+  "sources": ["wires", "solace_4sep", "reuters", "web_search"],
+  "notes": "No new Bahrain flash-bar items since prior Isa/AD wave 1-2 Sep. Airspace open as of 4 Sep sitrep. BAH flights showing. Causeway taxi rule civil only. X MCP failed_to_load tools=0 after restart; credits call rate-limited. Retry X next cycle."
+}
